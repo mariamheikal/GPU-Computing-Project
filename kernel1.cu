@@ -112,8 +112,8 @@ void jaccard_gpu1(CSRGraph* csrGraph, CSRGraph* csrGraph_d, COOMatrix* cooMatrix
     unsigned int* neighborsOfNeighbors;
     cudaMalloc((void**) &numCommonNeighbors, numBlocks*(numVertices-NEIGHBORS_of_NIEGHBORS_s)*sizeof(unsigned int));
     cudaMalloc((void**) &neighborsOfNeighbors, numBlocks*(numVertices-NEIGHBORS_of_NIEGHBORS_s)*sizeof(unsigned int));
-    //cudaMemset(numCommonNeighbors, 0, numBlocks*(numVertices-NEIGHBORS)*sizeof(unsigned int));
-    //cudaMemset(neighborsOfNeighbors, 0, numBlocks*(numVertices-NEIGHBORS)*sizeof(unsigned int));
+    cudaMemset(numCommonNeighbors, 0, numBlocks*(numVertices-NEIGHBORS_of_NIEGHBORS_s)*sizeof(unsigned int));
+    cudaMemset(neighborsOfNeighbors, 0, numBlocks*(numVertices-NEIGHBORS_of_NIEGHBORS_s)*sizeof(unsigned int));
     cudaDeviceSynchronize();
 
     jaccard_gpu1_kernel<<<numBlocks, numThreadsPerBlock>>>(csrGraph_d, cooMatrix_d, numCommonNeighbors, neighborsOfNeighbors);
