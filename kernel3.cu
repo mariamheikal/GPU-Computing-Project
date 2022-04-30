@@ -102,7 +102,6 @@ __global__ void jaccard_gpu3_kernel(CSRGraph* csrGraph_d, COOMatrix* cooMatrix_d
         if(threadIdx.x==0) {
             numNeighborsOfNeighbors=0; 
             numNeighborsOfNeighbors_s=0; 
-            j=0; 
             vertex = atomicAdd(&vertexPointer[0],1);
         }
         __syncthreads();
