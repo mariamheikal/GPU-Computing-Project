@@ -135,7 +135,7 @@ void jaccard_gpu3(CSRGraph* csrGraph, CSRGraph* csrGraph_d, COOMatrix* cooMatrix
     cudaDeviceSynchronize();
 
     jaccard_gpu3_kernel<<<numBlocks, BLOCK_DIM>>>(csrGraph_d, cooMatrix_d, numCommonNeighbors, neighborsOfNeighbors, vertexPointer);
-
+    cudaDeviceSynchronize();
     cudaFree(numCommonNeighbors);
     cudaFree(neighborsOfNeighbors);
 }
