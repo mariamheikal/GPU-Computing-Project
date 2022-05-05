@@ -13,10 +13,17 @@ x_dataset_size=[4.36,8.62,9.87,21.0]
 #y_k0=[19.0,88.5,60.5,277.8]
 #y_k1=[13.3,50.9,51.7,576.2]
 #------------------------MILESTONE 4--------------------------------------------------------------
-y_cpu=[117.16,661.77,781.83,2888.92]
-y_k0=[19.68,82.34,60.21,277.10]
-y_k1=[15.25,52.91,53.69,585.38]
-y_k2=[7.49,23.57,22.21,98.79]
+#y_cpu=[117.16,661.77,781.83,2888.92]
+#y_k0=[19.68,82.34,60.21,277.10]
+#y_k1=[15.25,52.91,53.69,585.38]
+#y_k2=[7.49,23.57,22.21,98.79]
+#------------------------MILESTONE 5--------------------------------------------------------------
+y_cpu=[141.1,606.8,622.3,2807.7]
+y_k0=[19.2,87.8,64.6,284.6]
+y_k1=[15.0,55.8,58.2,582.2]
+y_k2=[7.1,22.8,21.6,97.7]
+y_k3=[4.8,15.0,15.4,63.0]
+
 plt.plot(x_dataset_size, y_cpu, color = 'black',
          linestyle = 'solid', marker = 'o',
          markerfacecolor = 'black', markersize = 3,label='CPU')
@@ -29,6 +36,9 @@ plt.plot(x_dataset_size, y_k1, color = 'green',
 plt.plot(x_dataset_size, y_k2, color = 'red',
          linestyle = 'solid', marker = 'o',
          markerfacecolor = 'black', markersize = 3,label='Kernel 2')
+plt.plot(x_dataset_size, y_k3, color = 'goldenrod',
+         linestyle = 'solid', marker = 'o',
+         markerfacecolor = 'black', markersize = 3,label='Kernel 3')
 plt.legend()
 plt.xlabel("Dataset Size (MB)")
 plt.ylabel("Execution Time (ms)")
