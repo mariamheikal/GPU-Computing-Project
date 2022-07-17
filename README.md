@@ -34,8 +34,8 @@ Optional flags:
 
 ```
 
-# Execution Time vs Dataset Size of The Implemented Kernels and Single Threaded CPU Execution 
-<img width="431" alt="Plot 1" src="https://user-images.githubusercontent.com/47125583/179396890-adaaba1e-f781-41a3-a649-575a30c3ebcb.png">
+### Execution Time vs Dataset Size of The Implemented Kernels and Single Threaded CPU Execution 
+<img width="631" alt="Plot 1" src="https://user-images.githubusercontent.com/47125583/179396890-adaaba1e-f781-41a3-a649-575a30c3ebcb.png">
 
 
 
